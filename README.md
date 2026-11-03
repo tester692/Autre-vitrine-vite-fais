@@ -16,7 +16,7 @@ HTML / CSS / JavaScript natifs : aucune dépendance ni étape de compilation.
 
 ## Fonctionnalités
 
-- Design haut de gamme : bleu de l'établissement, or, liseré rouge-jaune-vert ; typographies Fraunces + Inter
+- Design haut de gamme : style éditorial noir & blanc + panneaux en verre dépoli, typographie Outfit
 - Animations discrètes : apparition au défilement, compteurs, en-tête qui se réduit, survols
 - Responsive mobile / tablette / ordinateur, menu mobile plein écran
 - Accessibilité : lien d'évitement, navigation au clavier, ARIA, respect de `prefers-reduced-motion`
