@@ -677,3 +677,71 @@ sup { line-height: 0; }
 .official--dark { background: var(--ink-2); border-color: var(--line-light); margin: 1.4rem 0 0; }
 .official--dark strong { color: var(--white); }
 .official--dark span:not(.seal) { color: var(--muted-light); }
+
+/* ---------- Ouverture : nom géant avec la photo dans les lettres ---------- */
+.mega { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(1.25rem, 3vw, 2rem); overflow: hidden; }
+.mega__word {
+  margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: -.045em; line-height: .86; white-space: nowrap; text-align: center;
+  font-size: calc(min(100vw - 2rem, var(--container)) * 1.62 / var(--chars, 12));
+  color: var(--ink); background-color: var(--ink); background-size: 150% auto; background-position: 0% 55%;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: megaIn 1.4s var(--ease) both, megaPan 16s ease-in-out 1.4s infinite alternate;
+}
+@keyframes megaIn { from { opacity: 0; letter-spacing: .02em; } to { opacity: 1; letter-spacing: -.045em; } }
+@keyframes megaPan { to { background-position: 100% 45%; } }
+.mega__lead { max-width: 640px; margin: 1.4rem auto 0; text-align: center; font-size: clamp(1.02rem, 1.6vw, 1.25rem); font-weight: 300; color: var(--muted); }
+@media (max-width: 640px) { .mega__lead { text-align: left; margin-top: 1rem; } }
+
+/* Titre fin + gras */
+.hero__content h1 strong { font-weight: 700; }
+
+/* Pastilles d'information avec icône ronde */
+.pill-bar { overflow-x: auto; scrollbar-width: none; max-width: 100%; gap: .2rem; }
+.pill-bar::-webkit-scrollbar { display: none; }
+.pill-bar__item { flex-direction: row; align-items: center; gap: .8rem; padding: .25rem 1.3rem .25rem .3rem; flex: 0 0 auto; }
+.pill-bar__ico { width: 42px; height: 42px; flex: 0 0 42px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255,255,255,.6); display: grid; place-items: center; }
+.pill-bar__ico svg { width: 17px; height: 17px; }
+.pill-bar__item > span:last-child { display: flex; flex-direction: column; line-height: 1.25; }
+.pill-bar__label { font-size: .6rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; }
+.pill-bar__value { font-size: .92rem; white-space: nowrap; }
+@media (max-width: 1023px) {
+  .hero__pills .pill { display: none; }
+  .hero__pills .pill-bar { display: flex; width: 100%; }
+  .pill-bar__item + .pill-bar__item { border-left: 0; }
+}
+
+/* Bandeau supérieur : devise centrée */
+.topbar__rep { letter-spacing: .26em; }
+.topbar__rep b { font-weight: 700; color: var(--white); }
+@media (max-width: 700px) { .topbar .container { padding: .55rem 0; line-height: 1.9; } .topbar__rep { display: block; color: var(--muted-light); } }
+
+/* Logo : blason rond + nom */
+.logo { flex-direction: row; align-items: center; gap: .8rem; text-align: left; }
+.nav .logo { align-items: center; }
+.logo__text { display: flex; flex-direction: column; }
+.seal--logo { width: 48px; height: 48px; flex-basis: 48px; }
+.site-footer .logo { align-items: center; }
+@media (max-width: 1023px) { .logo__name { font-size: 1.3rem; } }
+
+/* Bouton menu rond blanc */
+.nav__toggle { width: 52px; height: 52px; background: var(--white); border-color: transparent; box-shadow: 0 8px 22px -10px rgba(0,0,0,.35); }
+.nav__toggle span { left: 15px; right: 15px; }
+.nav__toggle span:nth-child(1) { top: 19px; }
+.nav__toggle span:nth-child(2) { top: 25px; }
+.nav__toggle span:nth-child(3) { top: 31px; }
+.nav__toggle[aria-expanded="true"] span:nth-child(1), .nav__toggle[aria-expanded="true"] span:nth-child(3) { top: 25px; }
+
+/* Bouton rond « Appeler » toujours visible */
+.fab {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 95; width: 60px; height: 60px; border-radius: 50%;
+  background: var(--ink); color: var(--white); display: grid; place-items: center; box-shadow: 0 16px 34px -12px rgba(0,0,0,.55);
+  transition: transform .4s var(--ease);
+}
+.fab::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1.5px solid var(--ink); animation: ring 2.6s var(--ease) infinite; }
+@keyframes ring { from { transform: scale(1); opacity: .6; } to { transform: scale(1.55); opacity: 0; } }
+.fab:hover { transform: scale(1.07); }
+.fab svg { width: 24px; height: 24px; }
+.back-to-top { bottom: 5.6rem; right: 1.55rem; width: 46px; height: 46px; background: var(--white); color: var(--ink); }
+.hero__frame { grid-template-columns: minmax(0, 1fr); }
+.hero__pills, .hero__content, .hero__cards { min-width: 0; }
+@media (max-width: 1023px) { .logo__tag { white-space: nowrap; letter-spacing: .2em; font-size: .5rem; } }
