@@ -600,3 +600,80 @@ sup { line-height: 0; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .reveal, [data-anim] { opacity: 1; transform: none; }
 }
+
+/* ---------- Éléments circulaires ---------- */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Options rondes (accès rapide) */
+.orbits { padding: clamp(3rem, 6vw, 4.5rem) 0 0; }
+.orbits__head { text-align: center; }
+.orbits__list {
+  list-style: none; margin: 0; padding: .5rem .25rem 1.25rem; display: flex; gap: clamp(1rem, 2.4vw, 2rem);
+  justify-content: space-between; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.orbits__list::-webkit-scrollbar { display: none; }
+.orbits__list li { flex: 0 0 auto; scroll-snap-align: start; }
+.orbit { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .3rem; width: 112px; }
+.orbit__ring { position: relative; width: 108px; height: 108px; border-radius: 50%; border: 1px solid var(--line); margin-bottom: .55rem; transition: border-color .4s; }
+.orbit__ring::after {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 1.5px dashed var(--ink);
+  opacity: 0; transform: scale(.92); transition: opacity .4s var(--ease), transform .5s var(--ease);
+}
+.orbit:hover .orbit__ring::after, .orbit:focus-visible .orbit__ring::after { opacity: 1; transform: scale(1); animation: spin 10s linear infinite; }
+.orbit:hover .orbit__ring { border-color: transparent; }
+.orbit__disc {
+  position: absolute; inset: 6px; border-radius: 50%; overflow: hidden; background: var(--paper);
+  display: grid; place-items: center; transition: transform .5s var(--ease);
+}
+.orbit:hover .orbit__disc { transform: scale(1.04); }
+.orbit__disc .photo, .orbit__disc:not(.orbit__disc--dark) > svg { width: 100%; height: 100%; object-fit: cover; }
+.orbit__disc--dark { background: var(--ink); color: var(--white); }
+.orbit__disc--dark svg { width: 30px; height: 30px; }
+.orbit__label { font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
+.orbit__sub { font-size: .76rem; color: var(--muted); }
+@media (max-width: 640px) { .orbit { width: 92px; } .orbit__ring { width: 88px; height: 88px; } }
+
+/* Badge rond tournant */
+.wordmark__stage { --img-w: clamp(130px, 20vw, 280px); }
+.spin-badge {
+  position: absolute; z-index: 2; top: 4%; left: calc(50% + var(--img-w) / 2 - 2.2rem);
+  width: clamp(96px, 10vw, 128px); aspect-ratio: 1; border-radius: 50%; background: var(--paper);
+  box-shadow: var(--shadow); display: grid; place-items: center; transition: transform .5s var(--ease);
+}
+.spin-badge:hover { transform: scale(1.06); }
+.spin-badge__text { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 18s linear infinite; }
+.spin-badge__core { width: 42%; aspect-ratio: 1; border-radius: 50%; background: var(--ink); color: var(--white); display: grid; place-items: center; transition: transform .5s var(--ease); }
+.spin-badge:hover .spin-badge__core { transform: rotate(45deg); }
+.spin-badge__core svg { width: 18px; height: 18px; }
+@media (max-width: 640px) { .spin-badge { top: -6%; width: 84px; } }
+
+/* Vignettes rondes du bandeau noir */
+.band__thumb { flex: 0 0 92px; height: 92px; border-radius: 50%; outline: 1px solid rgba(255,255,255,.25); outline-offset: 5px; transition: outline-offset .5s var(--ease), outline-color .4s; }
+.band__item:hover .band__thumb { outline-offset: 9px; outline-color: rgba(255,255,255,.7); }
+
+/* Icônes rondes des atouts */
+.perk svg { box-sizing: content-box; padding: 13px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); flex: 0 0 26px; width: 26px; height: 26px; transition: background .4s, color .4s; }
+.perk:hover svg { background: var(--ink); color: var(--white); }
+
+/* Filtres ronds (page Enseignements) */
+.filters--circles { gap: clamp(1rem, 3vw, 2.5rem); }
+.filter--circle { border: 0; padding: 0; background: none; display: flex; flex-direction: column; align-items: center; gap: .7rem; max-width: 120px; text-align: center; line-height: 1.35; }
+.filter--circle:hover, .filter--circle.is-active { background: none; color: var(--ink); }
+.filter__dot { width: 78px; height: 78px; border-radius: 50%; border: 1px solid var(--ink); display: grid; place-items: center; transition: background .4s var(--ease), color .4s, transform .4s var(--ease); }
+.filter__dot svg { width: 24px; height: 24px; }
+.filter--circle:hover .filter__dot { transform: translateY(-3px); }
+.filter--circle.is-active .filter__dot { background: var(--ink); color: var(--white); }
+
+/* Blason officiel en pastille ronde */
+.seal { width: 58px; height: 58px; flex: 0 0 58px; border-radius: 50%; background: var(--white); display: grid; place-items: center; box-shadow: 0 6px 18px -8px rgba(0,0,0,.3); color: var(--ink); }
+.seal img { width: 68%; height: auto; }
+.seal svg { width: 24px; height: 24px; }
+.seal--xs { width: 22px; height: 22px; flex-basis: 22px; box-shadow: none; }
+.seal--xs img { width: 74%; }
+.topbar__rep { display: inline-flex; align-items: center; gap: .6rem; }
+.official { display: inline-flex; align-items: center; gap: .9rem; margin: 0 0 1.8rem; padding: .55rem 1.3rem .55rem .55rem; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); }
+.official strong { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); }
+.official span:not(.seal) { font-size: .8rem; color: var(--muted); }
+.official--dark { background: var(--ink-2); border-color: var(--line-light); margin: 1.4rem 0 0; }
+.official--dark strong { color: var(--white); }
+.official--dark span:not(.seal) { color: var(--muted-light); }
