@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formations — NOVA École Supérieure</title>
-  <meta name="description" content="Découvrez les Bachelors, Masters et l'Executive MBA de NOVA, en formation initiale ou en alternance.">
-  <meta name="theme-color" content="#0b1220">
-  <meta property="og:title" content="Formations — NOVA École Supérieure">
-  <meta property="og:description" content="Découvrez les Bachelors, Masters et l'Executive MBA de NOVA, en formation initiale ou en alternance.">
+  <title>Enseignements — Complexe scolaire Sainte-Marie Saint-Georges</title>
+  <meta name="description" content="Maternelle, primaire, collège et lycée (SM, SE, SS) : les enseignements du complexe scolaire Sainte-Marie Saint-Georges.">
+  <meta name="theme-color" content="#0b1a3d">
+  <meta property="og:title" content="Enseignements — Complexe scolaire Sainte-Marie Saint-Georges">
+  <meta property="og:description" content="Maternelle, primaire, collège et lycée (SM, SE, SS) : les enseignements du complexe scolaire Sainte-Marie Saint-Georges.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/facade-batiment.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +20,19 @@
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <header class="site-header">
+    <div class="flag-strip" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="container nav">
-      <a class="logo" href="index.html" aria-label="NOVA École Supérieure — accueil">
-        <span class="logo__mark">N</span>
-        <span class="logo__text"><span class="logo__name">NOVA</span><span class="logo__tag">École Supérieure</span></span>
-      </a>
+      <a class="logo" href="index.html" aria-label="Complexe scolaire Sainte-Marie Saint-Georges — accueil"><span class="logo__mark">SG</span><span class="logo__text"><span class="logo__name" style="letter-spacing:.04em;font-size:1.15rem">Sainte-Marie Saint-Georges</span><span class="logo__tag">Complexe scolaire · Conakry</span></span></a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
       <nav class="nav__panel" id="nav-panel" aria-label="Navigation principale">
         <ul class="nav__menu">
           <li><a class="nav__link" href="index.html">Accueil</a></li>
           <li><a class="nav__link" href="ecole.html">L'École</a></li>
-          <li><a class="nav__link" href="formations.html" aria-current="page">Formations</a></li>
-          <li><a class="nav__link" href="admission.html">Admission</a></li>
+          <li><a class="nav__link" href="formations.html" aria-current="page">Enseignements</a></li>
+          <li><a class="nav__link" href="admission.html">Inscriptions</a></li>
           <li><a class="nav__link" href="actualites.html">Actualités</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
-          <li><a class="btn btn--gold nav__cta" href="admission.html#candidater">Candidater <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+          <li><a class="btn btn--gold nav__cta" href="admission.html#inscrire">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
         </ul>
       </nav>
     </div>
@@ -42,91 +41,81 @@
   <main id="contenu">
     <section class="page-hero">
       <div class="container">
-        <ol class="breadcrumb reveal"><li><a href="index.html">Accueil</a></li><li aria-current="page">Formations</li></ol>
-        <span class="eyebrow reveal">Nos programmes</span>
-        <h1 class="reveal" data-delay="1">Des formations <em>d'excellence</em>, du Bachelor à l'Executive MBA.</h1>
-        <p class="lead reveal" data-delay="2">Sept programmes diplômants, en formation initiale ou en alternance, construits avec les entreprises pour répondre aux grands défis de notre époque.</p>
+        <ol class="breadcrumb reveal"><li><a href="index.html">Accueil</a></li><li aria-current="page">Enseignements</li></ol>
+        <span class="eyebrow reveal">Nos enseignements</span>
+        <h1 class="reveal" data-delay="1">De la maternelle à la Terminale, <em>un seul établissement</em>.</h1>
+        <p class="lead reveal" data-delay="2">Quatre cycles et trois séries au lycée, conformes aux programmes officiels de la République de Guinée, pour accompagner votre enfant jusqu'au Baccalauréat.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="filters reveal" role="group" aria-label="Filtrer les formations">
-          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Toutes</button>
-          <button class="filter" type="button" data-filter="tech" aria-pressed="false">Numérique &amp; tech</button>
-          <button class="filter" type="button" data-filter="business" aria-pressed="false">Management</button>
-          <button class="filter" type="button" data-filter="design" aria-pressed="false">Design</button>
+        <div class="filters reveal" role="group" aria-label="Filtrer par cycle">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="filter" type="button" data-filter="primaire" aria-pressed="false">Maternelle &amp; primaire</button>
+          <button class="filter" type="button" data-filter="college" aria-pressed="false">Collège</button>
+          <button class="filter" type="button" data-filter="lycee" aria-pressed="false">Lycée</button>
         </div>
         <div class="programs">
-          <article class="program reveal" data-category="tech">
+          <article class="program reveal" data-category="primaire">
             <div>
-              <span class="program__level">Bachelor · Bac+3</span>
-              <h3>Ingénierie logicielle &amp; IA</h3>
-              <p>Concevoir des applications robustes et intégrer l'intelligence artificielle de façon responsable, du prototype à la mise en production.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Développement full-stack</li><li class="tag">Machine learning</li><li class="tag">Cloud &amp; DevOps</li><li class="tag">Éthique du numérique</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Cycle 1 · 3 – 5 ans</span>
+              <h3>Maternelle</h3>
+              <p>Éveil, langage, motricité et vie en collectivité : les premiers pas de l'enfant à l'école, dans un cadre doux et sécurisant.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Éveil au langage</li><li class="tag">Pré-lecture</li><li class="tag">Activités manuelles</li><li class="tag">Chant &amp; motricité</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>3 ans</dd></div><div><dt>Rythme</dt><dd>Initial ou alternance</dd></div><div><dt>Crédits</dt><dd>180 ECTS</dd></div><div><dt>Langue</dt><dd>Français / Anglais</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>3 à 5 ans</dd></div><div><dt>Classes</dt><dd>Petite, moyenne, grande section</dd></div><div><dt>Examen</dt><dd>—</dd></div><div><dt>Horaires</dt><dd>Demi-journée ou journée</dd></div></dl>
           </article>
-          <article class="program reveal" data-category="business">
+          <article class="program reveal" data-category="primaire">
             <div>
-              <span class="program__level">Bachelor · Bac+3</span>
-              <h3>Management &amp; entrepreneuriat</h3>
-              <p>Acquérir les fondamentaux de la gestion, du marketing et de la finance, et lancer son propre projet au sein de notre incubateur.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Stratégie</li><li class="tag">Marketing digital</li><li class="tag">Finance d'entreprise</li><li class="tag">Incubateur NOVA Lab</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Cycle 2 · 6 ans</span>
+              <h3>École primaire</h3>
+              <p>Lire, écrire, compter : une solide maîtrise des fondamentaux et un suivi individuel jusqu'à l'examen de fin de cycle.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Français</li><li class="tag">Calcul</li><li class="tag">Éveil scientifique</li><li class="tag">Éducation civique</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>3 ans</dd></div><div><dt>Rythme</dt><dd>Initial</dd></div><div><dt>Crédits</dt><dd>180 ECTS</dd></div><div><dt>Langue</dt><dd>Français</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>6 à 12 ans</dd></div><div><dt>Classes</dt><dd>CP1 → CM2</dd></div><div><dt>Examen</dt><dd>CEE</dd></div><div><dt>Horaires</dt><dd>Journée complète</dd></div></dl>
           </article>
-          <article class="program reveal" data-category="design">
+          <article class="program reveal" data-category="college">
             <div>
-              <span class="program__level">Bachelor · Bac+3</span>
-              <h3>Design &amp; expérience utilisateur</h3>
-              <p>Imaginer des produits, services et interfaces centrés sur l'humain, en alliant recherche utilisateur, créativité et prototypage.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Design d'interface</li><li class="tag">Recherche utilisateur</li><li class="tag">Design de service</li><li class="tag">Prototypage</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Cycle 3 · 4 ans</span>
+              <h3>Collège</h3>
+              <p>Approfondir les savoirs, développer l'autonomie et la méthode de travail, préparer sereinement le BEPC.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Mathématiques</li><li class="tag">Sciences physiques</li><li class="tag">Anglais</li><li class="tag">Histoire-géographie</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>3 ans</dd></div><div><dt>Rythme</dt><dd>Initial ou alternance</dd></div><div><dt>Crédits</dt><dd>180 ECTS</dd></div><div><dt>Langue</dt><dd>Français</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>12 à 16 ans</dd></div><div><dt>Classes</dt><dd>7<sup>e</sup> → 10<sup>e</sup> année</dd></div><div><dt>Examen</dt><dd>BEPC</dd></div><div><dt>Horaires</dt><dd>Journée complète</dd></div></dl>
           </article>
-          <article class="program reveal" data-category="tech">
+          <article class="program reveal" data-category="lycee">
             <div>
-              <span class="program__level">Master · Bac+5</span>
-              <h3>Data science &amp; IA appliquée</h3>
-              <p>Maîtriser la chaîne complète de la donnée — collecte, modélisation, déploiement — et piloter des projets d'IA à fort impact.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Deep learning</li><li class="tag">MLOps</li><li class="tag">Statistiques avancées</li><li class="tag">Gouvernance des données</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Lycée · Série SM</span>
+              <h3>Sciences mathématiques</h3>
+              <p>Pour les élèves attirés par les mathématiques et la physique, en vue d'études d'ingénieur, d'informatique ou de sciences exactes.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Mathématiques</li><li class="tag">Physique</li><li class="tag">Chimie</li><li class="tag">Philosophie</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>2 ans</dd></div><div><dt>Rythme</dt><dd>Alternance</dd></div><div><dt>Crédits</dt><dd>120 ECTS</dd></div><div><dt>Langue</dt><dd>Anglais</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>16 à 19 ans</dd></div><div><dt>Classes</dt><dd>11<sup>e</sup> → Terminale</dd></div><div><dt>Examen</dt><dd>Baccalauréat</dd></div><div><dt>Horaires</dt><dd>Journée complète</dd></div></dl>
           </article>
-          <article class="program reveal" data-category="tech">
+          <article class="program reveal" data-category="lycee">
             <div>
-              <span class="program__level">Master · Bac+5</span>
-              <h3>Cybersécurité</h3>
-              <p>Protéger les systèmes d'information face aux menaces actuelles : audit, sécurité offensive et défensive, conformité.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Sécurité réseau</li><li class="tag">Pentest</li><li class="tag">Cryptographie</li><li class="tag">Gestion de crise</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Lycée · Série SE</span>
+              <h3>Sciences expérimentales</h3>
+              <p>Biologie, chimie et sciences de la Terre au cœur du parcours : la voie privilégiée vers la médecine, la pharmacie ou l'agronomie.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Biologie</li><li class="tag">Chimie</li><li class="tag">Mathématiques</li><li class="tag">Géologie</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>2 ans</dd></div><div><dt>Rythme</dt><dd>Alternance</dd></div><div><dt>Crédits</dt><dd>120 ECTS</dd></div><div><dt>Langue</dt><dd>Français / Anglais</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>16 à 19 ans</dd></div><div><dt>Classes</dt><dd>11<sup>e</sup> → Terminale</dd></div><div><dt>Examen</dt><dd>Baccalauréat</dd></div><div><dt>Horaires</dt><dd>Journée complète</dd></div></dl>
           </article>
-          <article class="program reveal" data-category="business">
+          <article class="program reveal" data-category="lycee">
             <div>
-              <span class="program__level">Master · Bac+5</span>
-              <h3>Transition écologique &amp; RSE</h3>
-              <p>Accompagner les organisations dans leur transformation durable grâce à des outils de stratégie, de mesure d'impact et de pilotage.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Bilan carbone</li><li class="tag">Finance durable</li><li class="tag">Économie circulaire</li><li class="tag">Conduite du changement</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <span class="program__level">Lycée · Série SS</span>
+              <h3>Sciences sociales</h3>
+              <p>Lettres, histoire, géographie et économie pour les futurs juristes, gestionnaires, journalistes ou enseignants.</p>
+              <ul class="program__list" aria-label="Matières clés"><li class="tag">Français</li><li class="tag">Histoire-géographie</li><li class="tag">Économie</li><li class="tag">Philosophie</li></ul>
+              <a class="link-arrow card__link" href="admission.html">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>2 ans</dd></div><div><dt>Rythme</dt><dd>Initial ou alternance</dd></div><div><dt>Crédits</dt><dd>120 ECTS</dd></div><div><dt>Langue</dt><dd>Français</dd></div></dl>
-          </article>
-          <article class="program reveal" data-category="business design">
-            <div>
-              <span class="program__level">MBA · Exécutif</span>
-              <h3>Executive MBA Innovation</h3>
-              <p>Un programme à temps partiel pour cadres et dirigeants souhaitant mener l'innovation à l'échelle internationale.</p>
-              <ul class="program__list" aria-label="Modules clés"><li class="tag">Leadership</li><li class="tag">Innovation</li><li class="tag">Séminaire international</li><li class="tag">Projet de transformation</li></ul>
-              <a class="link-arrow card__link" href="contact.html">Demander la brochure <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-            <dl class="program__facts"><div><dt>Durée</dt><dd>18 mois</dd></div><div><dt>Rythme</dt><dd>Temps partiel</dd></div><div><dt>Crédits</dt><dd>Week-ends</dd></div><div><dt>Langue</dt><dd>Anglais</dd></div></dl>
+            <dl class="program__facts"><div><dt>Âges</dt><dd>16 à 19 ans</dd></div><div><dt>Classes</dt><dd>11<sup>e</sup> → Terminale</dd></div><div><dt>Examen</dt><dd>Baccalauréat</dd></div><div><dt>Horaires</dt><dd>Journée complète</dd></div></dl>
           </article>
         </div>
       </div>
@@ -135,13 +124,13 @@
     <section class="section section--dark">
       <div class="container">
         <div class="section-head section-head--split">
-          <div><span class="eyebrow reveal">Pédagogie</span><h2 class="reveal" data-delay="1">Un parcours qui vous ressemble.</h2></div>
-          <p class="lead reveal" data-delay="2">Chaque cursus combine socle fondamental, spécialisation progressive et immersion professionnelle.</p>
+          <div><span class="eyebrow reveal">Pédagogie</span><h2 class="reveal" data-delay="1">Une méthode qui fait ses preuves.</h2></div>
+          <p class="lead reveal" data-delay="2">À chaque étape, nous veillons à ce que l'élève maîtrise les bases avant d'aller plus loin.</p>
         </div>
         <div class="grid grid--3">
-          <div class="feature reveal"><span class="feature__num">Année 1</span><h3>Fondamentaux</h3><p>Acquérir les savoirs essentiels, méthodes de travail et culture générale du domaine.</p></div>
-          <div class="feature reveal" data-delay="1"><span class="feature__num">Année 2</span><h3>Approfondissement</h3><p>Choisir ses options, réaliser un stage de 3 mois et vivre un semestre à l'international.</p></div>
-          <div class="feature reveal" data-delay="2"><span class="feature__num">Année 3 et +</span><h3>Professionnalisation</h3><p>Alternance ou stage long, projet de fin d'études et accompagnement vers l'emploi.</p></div>
+          <div class="feature reveal"><span class="feature__num">Évaluer</span><h3>Contrôle continu</h3><p>Devoirs et compositions réguliers pour mesurer les progrès et réagir vite.</p></div>
+          <div class="feature reveal" data-delay="1"><span class="feature__num">Accompagner</span><h3>Suivi individuel</h3><p>Chaque élève en difficulté bénéficie d'un soutien adapté et d'un dialogue avec sa famille.</p></div>
+          <div class="feature reveal" data-delay="2"><span class="feature__num">Préparer</span><h3>Examens blancs</h3><p>CEE, BEPC et Baccalauréat blancs pour aborder les examens nationaux en confiance.</p></div>
         </div>
       </div>
     </section>
@@ -150,13 +139,13 @@
       <div class="container">
         <div class="cta reveal">
           <div>
-            <span class="eyebrow">Rentrée 2027</span>
-            <h2>Trouvons ensemble votre formation.</h2>
-            <p>Nos conseillers vous accompagnent pour choisir le programme le plus adapté à votre projet.</p>
+            <span class="eyebrow">Année scolaire 2026-2027</span>
+            <h2>Trouvons ensemble la bonne classe pour votre enfant.</h2>
+            <p>Le secrétariat vous renseigne sur les niveaux, les places disponibles et les modalités d'inscription.</p>
           </div>
           <div class="cta__actions">
-            <a class="btn btn--gold" href="admission.html#candidater">Candidater <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn--ghost-light" href="contact.html">Nous rencontrer</a>
+            <a class="btn btn--gold" href="admission.html#inscrire">Inscrire mon enfant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost-light" href="contact.html">Nous contacter</a>
           </div>
         </div>
       </div>
@@ -167,33 +156,33 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__about">
-          <a class="logo" href="index.html"><span class="logo__mark">N</span><span class="logo__text"><span class="logo__name">NOVA</span><span class="logo__tag">École Supérieure</span></span></a>
-          <p>Former les esprits qui dessineront le monde de demain. Une école supérieure exigeante, ouverte et résolument tournée vers l'avenir.</p>
-          <div class="socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4v11H4zM6 3a2 2 0 110 4 2 2 0 010-4zM10 9h4v1.6c.6-1 1.9-1.9 3.8-1.9 3.6 0 4.2 2.3 4.2 5.4V20h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20h-4z" fill="currentColor"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2a3 3 0 00-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 002 8.2 31 31 0 001.6 12 31 31 0 002 15.8a3 3 0 002.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 002.1-2.1 31 31 0 00.4-3.8 31 31 0 00-.4-3.8zM10 15.2V8.8l5.2 3.2z" fill="currentColor"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.3l-7.2 8.2L22.4 21h-6.6l-5.2-6.8L4.7 21H1.4l7.7-8.8L1 3h6.8l4.7 6.2zm-1.2 16h1.8L7.5 4.9H5.5z" fill="currentColor"/></svg></a></div>
+          <a class="logo" href="index.html"><span class="logo__mark">SG</span><span class="logo__text"><span class="logo__name" style="letter-spacing:.04em;font-size:1.15rem">Sainte-Marie Saint-Georges</span><span class="logo__tag">Complexe scolaire · Conakry</span></span></a>
+          <p>De la maternelle à la Terminale, nous accompagnons chaque enfant vers la réussite, dans un cadre exigeant, discipliné et bienveillant.</p>
+          <div class="socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4v11H4zM6 3a2 2 0 110 4 2 2 0 010-4zM10 9h4v1.6c.6-1 1.9-1.9 3.8-1.9 3.6 0 4.2 2.3 4.2 5.4V20h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V20h-4z" fill="currentColor"/></svg></a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2a3 3 0 00-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 002 8.2 31 31 0 001.6 12 31 31 0 002 15.8a3 3 0 002.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 002.1-2.1 31 31 0 00.4-3.8 31 31 0 00-.4-3.8zM10 15.2V8.8l5.2 3.2z" fill="currentColor"/></svg></a></div>
         </div>
         <div>
           <h2 class="footer__title">L'école</h2>
           <ul class="footer__links">
-            <li><a href="ecole.html">Notre histoire</a></li>
+            <li><a href="ecole.html">Présentation</a></li>
             <li><a href="ecole.html#valeurs">Nos valeurs</a></li>
-            <li><a href="ecole.html#campus">Le campus</a></li>
+            <li><a href="ecole.html#infrastructures">Infrastructures</a></li>
             <li><a href="actualites.html">Actualités</a></li>
           </ul>
         </div>
         <div>
-          <h2 class="footer__title">Étudier</h2>
+          <h2 class="footer__title">Scolarité</h2>
           <ul class="footer__links">
-            <li><a href="formations.html">Formations</a></li>
-            <li><a href="admission.html">Admission</a></li>
-            <li><a href="admission.html#frais">Frais &amp; bourses</a></li>
+            <li><a href="formations.html">Enseignements</a></li>
+            <li><a href="admission.html">Inscriptions</a></li>
+            <li><a href="admission.html#calendrier">Calendrier</a></li>
             <li><a href="contact.html">Nous contacter</a></li>
           </ul>
         </div>
         <div>
-          <h2 class="footer__title">Lettre d'information</h2>
-          <p>Recevez nos actualités et les dates des journées portes ouvertes.</p>
+          <h2 class="footer__title">Restez informés</h2>
+          <p>Recevez les annonces de l'école&nbsp;: rentrée, examens, réunions de parents.</p>
           <form class="newsletter" novalidate>
-            <label class="sr-only" for="nl-formations.html" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Adresse e-mail</label>
+            <label for="nl-formations.html" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Adresse e-mail</label>
             <input id="nl-formations.html" type="email" placeholder="Votre e-mail" autocomplete="email">
             <button type="submit">S'inscrire</button>
           </form>
@@ -201,11 +190,11 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© <span data-year>2026</span> NOVA École Supérieure. Tous droits réservés.</p>
+        <p>© <span data-year>2026</span> Complexe scolaire Sainte-Marie Saint-Georges · Conakry, Guinée.</p>
         <ul>
           <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Confidentialité</a></li>
-          <li><a href="#">Accessibilité</a></li>
+          <li><a href="#">Règlement intérieur</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
